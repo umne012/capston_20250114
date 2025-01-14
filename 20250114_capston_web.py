@@ -12,13 +12,13 @@ from joblib import load
 
 
 # Load the required files
-model = load('[반출]241226(총10개)/241225_rf_model_외국인.pkl')
-scaler = load('[반출]241226(총10개)/241225_rf_scaler_외국인.pkl')
-with open('[반출]241226(총10개)/241225_selected_features_외국인.json', 'r') as f:
+model = load('241225_rf_model_외국인.pkl')
+scaler = load('241225_rf_scaler_외국인.pkl')
+with open('241225_selected_features_외국인.json', 'r') as f:
     features = pd.read_json(f, typ='series')
-shap_values = load('[반출]241226(총10개)/241225_shap_rf_외국인.pkl')
-summary_stats = pd.read_csv('[반출]241226(총10개)/241225_summary_stats_외국인.csv')
-explainer = load("[반출]241226(총10개)/241225_shap_rf_explainer_외국인.pkl")
+shap_values = load('241225_shap_rf_외국인.pkl')
+summary_stats = pd.read_csv('241225_summary_stats_외국인.csv')
+explainer = load("241225_shap_rf_explainer_외국인.pkl")
 
 import streamlit as st
 import pandas as pd
