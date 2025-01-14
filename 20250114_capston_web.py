@@ -15,7 +15,7 @@ model = load('241225_rf_model.pkl')
 scaler = load('241225_rf_scaler.pkl')
 with open('241225_selected_features.json', 'r') as f:
     features = pd.read_json(f, typ='series')
-shap_values = load('241225_shap_rf.pkl')
+
 summary_stats = pd.read_csv('241225_summary_stats.csv')
 explainer = load("241225_shap_rf_explainer.pkl")
 
