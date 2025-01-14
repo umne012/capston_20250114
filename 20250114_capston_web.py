@@ -15,13 +15,13 @@ st.write(f"현재 작업 디렉토리: {os.getcwd()}")
 #!/usr/pin/python3
 
 # Load the required files
-model = load('241225_rf_model_외국인.pkl')
-scaler = load('241225_rf_scaler_외국인.pkl')
-with open('241225_selected_features_외국인.json', 'r') as f:
+model = load('241225_rf_model.pkl')
+scaler = load('241225_rf_scaler.pkl')
+with open('241225_selected_features.json', 'r') as f:
     features = pd.read_json(f, typ='series')
-shap_values = load('241225_shap_rf_외국인.pkl')
-summary_stats = pd.read_csv('241225_summary_stats_외국인.csv')
-explainer = load("241225_shap_rf_explainer_외국인.pkl")
+shap_values = load('241225_shap_rf.pkl')
+summary_stats = pd.read_csv('241225_summary_stats.csv')
+explainer = load("241225_shap_rf_explainer.pkl")
 
 import streamlit as st
 import pandas as pd
