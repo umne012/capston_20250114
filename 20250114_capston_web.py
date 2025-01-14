@@ -235,7 +235,7 @@ if st.button("분석"):
         else:
             current_stage = "1단계(상위70~100%)"
 
-        st.write(f"## 나의 현재 단계: {current_stage}")
+        st.write(f"# 나의 현재 단계: {current_stage}")
         st.write(f"###### 연체 확률: {delinquency_prob:.2%}")
 
         # 단계별 평균 금리 데이터
@@ -327,7 +327,7 @@ if st.button("분석"):
         current_index = stages.index(current_stage)
 
         # 현재 단계 테이블 출력
-        st.write("### 금융 경로 안내")
+        st.write("## 금융 경로 안내")
         st.write(f"###### 내가 속한 {current_stage} 그룹의 주요 경로")
         st.dataframe(group_data[current_stage])
 
@@ -339,7 +339,7 @@ if st.button("분석"):
 
 
         # 4. SHAP 나의 점수에 영향을 미친 항목 시각화
-        st.write("### 나의 점수에 영향을 미친 항목")
+        st.write("## 나의 점수에 영향을 미친 항목")
 
         # SHAP 값 생성
         shap_values = explainer(final_df)
