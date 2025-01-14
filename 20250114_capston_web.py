@@ -10,13 +10,6 @@ from joblib import load
 
 #!/usr/pin/python3
 
-import os
-import streamlit as st
-
-current_dir = os.getcwd()
-st.write(f"현재 작업 디렉토리: {current_dir}")
-
-
 # Load the required files
 model = load('./241225_rf_model_외국인.pkl')
 scaler = load('./241225_rf_scaler_외국인.pkl')
@@ -31,9 +24,6 @@ import pandas as pd
 import plotly.graph_objects as go
 from joblib import load
 
-# 모델과 스케일러 로드
-model = load('[반출]241226(총10개)/241225_rf_model_외국인.pkl')
-scaler = load('[반출]241226(총10개)/241225_rf_scaler_외국인.pkl')
 
 # Streamlit 세션 상태 초기화
 if "loan_data" not in st.session_state:
