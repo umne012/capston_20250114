@@ -10,6 +10,12 @@ from joblib import load
 
 #!/usr/pin/python3
 
+import os
+import streamlit as st
+
+current_dir = os.getcwd()
+st.write(f"현재 작업 디렉토리: {current_dir}")
+
 
 # Load the required files
 model = load('./241225_rf_model_외국인.pkl')
