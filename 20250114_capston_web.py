@@ -10,10 +10,6 @@ from joblib import load
 import os
 import streamlit as st
 
-st.write(f"현재 작업 디렉토리: {os.getcwd()}")
-
-#!/usr/pin/python3
-
 # Load the required files
 model = load('241225_rf_model.pkl')
 scaler = load('241225_rf_scaler.pkl')
